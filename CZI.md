@@ -5,26 +5,47 @@
 
 > 172 words
 
-While hiring took longer than expected, since Elliott Sales de Andrade
-started (mid-mach) we have hit our target of a net reduction of open
-PRs by 50/quarter, and are making progress on reducing the number of
-open issues.  Our initial estimates of the effort per issue closed was
-too optimistic.  Several of the issues closed were mid-sized and
-high-impact projects (documentation, js modernization, and semantic
-Axes layout).  In addition to the above work we have done 2 feature
-release and 5 bug-fix releases since January 2020.
+We identified and hired Elliott Sales de Andrade as an Software
+Research Engineer who started in mid-March.  Since then we have hit
+our target of a net reduction of open PRs by 50/quarter.  We are
+making progress on reducing the number of open issues but our initial
+estimates of the effort per issue closed was too optimistic.  Several
+of the issues closed were mid-sized and high-impact projects
+(documentation, js modernization, and semantic Axes layout).  In
+addition to the above work we have done 2 feature release and 5
+bug-fix releases since January 2020.
 
 We maintain a discourse forum to facilitate conversations with users and
 drafted new code and community contributor onboarding guidelines.
 
-While building the initial prototype, our priority shifted from
-reviewing the architecture of other libraries to developing the
-theoretical underpinnings of the new architecture.  Subsequent
-iterations have tightly coupled the prototype implementation to the
-developing architecture to avoid drifting due to immediate technical
-needs.  We have prioritized structured 2D array-like and tabular data
-to ensure we do not break existing functionality.
+<few sentences about the data / visual element / artist separation>.
 
+* reached:
+
+- Start dialog with downstream libraries We presented our new
+  architecture model to the scientific library development community
+  at the SciPy 2020 maintainers track.
+- Start to identify the categories of `DataSource`s and `Artist`s and
+  their relationships We are refactoring the library component roles
+  and responsibility using functional programming ideas and have begun
+  a list of constraints the library should preserve in
+  transforming data visual representation.
+- Work out API between `Artist` and `DataSource`
+  * We are building prototypes of common visual representations to
+    test if the new architecture is expressive enough to support current
+    Matplotlib visualizations.
+
+* moved:
+
+- Review of architecture of other plotting packages, ready for
+  submission to journal In working out the architecture, we scoped the
+  literature review of architecture based on the proposed architecture
+  change.
+
+* missed:
+
+- collect user stories of plotting needs We have been collecting user
+  stories informally but need to do
 
 ## Proposal Purpose
 
@@ -32,9 +53,14 @@ to ensure we do not break existing functionality.
 
 > 245 characters
 
-​​To enable Matplotlib to continue as the core plotting library of the
+To enable Matplotlib to continue as the core plotting library of the
 Scientific Python Ecosystem, we will address the maintenance backlog
 and begin Matplotlib's evolution to meet the community’s visualization
+challenges for the next decade.
+
+​​To enable Matplotlib to continue as the core plotting library of the
+Scientific Python Ecosystem, we will address the maintenance backlog
+and plan Matplotlib's evolution to meet the community’s visualization
 challenges for the next decade.
 
 
@@ -45,7 +71,7 @@ challenges for the next decade.
 > - start to implement design work planned this year
 > - engage with down-stream packages
 
-> 191 words
+> 252 words
 
 ​​Matplotlib is the foundational data visualization library for the
 ​​Scientific Python Ecosystem, used by over a million users, including
@@ -58,8 +84,8 @@ challenges for the next decade.
 
 With supported developers we have been able reduce our backlog of open
 Issues and Pull Requests, a marked change from the previous few years
-when both were steadily increasing.  We propose to dedicate a full
-developer to maintenance, mid-sized enhancements, and user support.
+when both were steadily increasing.  We propose to support a developer
+to continue maintenance, mid-sized enhancements, and user support.
 This has the direct effect of improving the library for our users and
 improve the experience of our contributors and community.
 
@@ -69,11 +95,11 @@ library.  We propose committing approximately a third of the developer to
 maintaining and fostering this community.
 
 Building on the theoretical and design work we have done in the past
-year we will continue to re-implement the core of Matplotlib using the
+year we will begin evolve Matplotlib to incrementally make use of the
 new architecture.  Simultaneously we will continue to unify and extend
 the user facing API and collaborate with domain specific libraries to
-build highly tuned plotting tools.  We propose committing a developer
-year to this effort.
+build highly tuned plotting tools.  We propose continuing support for
+the graduate student who is leading the this effort as her thesis work.
 
 ## Work Plan
 
@@ -96,7 +122,7 @@ to accomplish them in a timely manner with only volunteer effort as
 they are frequently reactive, you can not plan for a critical bug to
 be found or a dependency to change, time critical, and not always fun.
 By making sure these tasks are done we will improve the experience for
-both new and existing contributors and improve the onboard new
+both new and existing contributors and improve the onboarding of new
 contributors to the project.  We propose to devote three quarters of a
 developers time to handling these tasks.
 
@@ -109,18 +135,9 @@ the UI to preview what plots will look like under different types and
 degrees of color-blindness.  To implement this we need to both do the
 programming and design work to add the feature, we need to research
 how to properly implement the filters and consult with
-color-perception experts.  We propose devoting a quarter of a
-developer to these mid-sized enhancements projects.
-
-Building on what we have learned in the past year working on re-designing the
-low-level architecture we will :
-
-
-
-- Finish architecture development & start to implement in core library
-- start to re-design user API in a way that can make the most of the
-  improved internal structure
-
+color-perception experts.  We will aim to complete 5 of these projects
+and will work with downstream bio-projects to identify what will have
+the greatest impact.
 
 The most common visualizations in a domain need to be fluid for the
 end-practitioners, with the "obvious" customization options exposed.
@@ -129,10 +146,19 @@ structure, semantics and assumptions of the data, and in the standard
 visualizations of the domain.  These specializations can vary widely,
 in contradictory ways, between domains.  Because no high-level API can
 simultaneously satisfy all of the visualization needs, there will
-always be a need for domain-specific visualization libraries.  We will
-continue to work with down-stream libraries to make sure that we are
-able to support them to support their users both in terms of
-implementing data sources, artists, and user API.
+always be a need for domain-specific visualization libraries.
+Building on the work done this year to design consistent internal data
+structures we will begin to develop simpler and more expressive
+top-level APIs.  We will continue to work with down-stream bio
+libraries to support them in implementing data sources, artists, and
+user API.
+
+The requested support for developers is intended to complement and
+facilitate, not replace, crucial volunteer work. We aim to better
+co-ordinate and nurture their efforts, with the goal of growing and
+sustaining a diverse community of volunteer and paid expert
+contributors.
+
 
 ---
 
@@ -164,8 +190,8 @@ number of open Issues and PRs.  We will reduce this number by closing
 Issues and PRs faster than they are opened until a reasonable
 equilibrium is reached.  We will aim to hit the following metrics:
 
-- Initial response to all issues / new PRs in < 3 days
-- Resolve 90% of new issues / PRs within 1 month
+- Initial response to all issues / new PRs within a week
+- Resolve majority of new issues / PRs within 1 month
 - ​​Reduce backlog of issues by 50 / quarter
 - ​​Reduce backlog of PRs by 50 / quarter
 
@@ -215,11 +241,9 @@ Given the centrality of visualization to data analysis across all
 domains no single tool is going to be suited to fit all needs.  There
 are a range of tools, see https://pyviz.org/tools.html for a long but
 not exhaustive list, not built on Matplotlib that target use cases
-(such as client-side rendering in a web browser or high-performance
-GPU accelerated rendering) that Matplotlib is not well suited for.  A
-goal of our work is to increase the degree to which the tools can
-interoperate letting users switch tools as needed to use the right
-tool for the job.
+that Matplotlib is not well suited for.  A goal of our work is to
+increase the degree to which the tools can interoperate letting users
+switch tools as needed to use the right tool for the job.
 
 [1] https://pypi.org/search/?q=&o=&c=Framework+%3A%3A+Matplotlib
 
@@ -234,14 +258,18 @@ tool for the job.
 > cycle applications ​(maximum of 250 words)
 
 The Matplotlib project is committed to being an open and welcoming
-project.  It is critical that all contributors, independent of
+project. Because our contributors come from a wide range of
+backgrounds and experiences, we believe as a project that transparency
+and explicitness of process and in communication are key to building
+an inclusive, equitable, and diverse project.  In our effort to be
+welcoming, we have also worked at being more explicit about how the
+project operates and our norms and values.  To this end, we have put
+major effort into documenting our governance, defining leadership
+roles, and specific expectations for new code and community
+contributors.  It is critical that all contributors, independent of
 experience level both in general and with the project, feel safe to
-make mistakes, be wrong, and learn in our community.  We embody these
-values in our interactions on github, our community discussion forum
-(discourse) and in our social media. In our effort to be welcoming, we
-have also worked at being more explicit about how the project operates
-and our norms and values.  To this end, we have put major effort into
-documenting our governance, defining leadership roles, and
-specificying expectations for new code and community contributors.  We
-hope this explicitness will empower people to make more informed
-decisions about participating in open source.
+make mistakes and learn in our community.  We embody these values in
+our interactions on github, our community discussion forum
+(discourse), mailing lists, and in our social media.  We hope that
+these practices will empower and encourage people of diverse
+identities to participate in Matplotlib.
