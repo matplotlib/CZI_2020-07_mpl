@@ -3,22 +3,27 @@
 > Provide a short summary of progress towards the deliverables in your
 > currently funded proposal (maximum of 250 words)
 
-> 95 words
+> 172 words
 
 While hiring took longer than expected, since Elliott Sales de Andrade
 started (mid-mach) we have hit our target of a net reduction of open
 PRs by 50/quarter, and are making progress on reducing the number of
 open issues.  Our initial estimates of the effort per issue closed was
-[this sentence needs to be completed]
-to Several mid-sized high-impact projects (documentation, js
-modernization, and semantic Axes layout) have been merged that would
-not have happened without this support.  In addition to the above work
-we have done 2 feature release and 5 bug-fix releases since January
-2020.
+too optimistic.  Several of the issues closed were mid-sized and
+high-impact projects (documentation, js modernization, and semantic
+Axes layout).  In addition to the above work we have done 2 feature
+release and 5 bug-fix releases since January 2020.
 
-We created a discourse to facilitate conversations with users and drafted new code and community contributor onboarding guidelines and (have seen an increase in new contributors?)
+We maintain a discourse forum to facilitate conversations with users and
+drafted new code and community contributor onboarding guidelines.
 
-While building the initial prototype, our priority shifted from reviewing the architecture of other libraries to developing the theoretical underpinnings of the new architecture Subsequent iterations have tightly coupled the prototype implementation to the developing architecture to avoid drifting due to immediate technical needs. We prioritized structured 2D array like data to ensure we do not break existing functionality. 
+While building the initial prototype, our priority shifted from
+reviewing the architecture of other libraries to developing the
+theoretical underpinnings of the new architecture.  Subsequent
+iterations have tightly coupled the prototype implementation to the
+developing architecture to avoid drifting due to immediate technical
+needs.  We have prioritized structured 2D array-like and tabular data
+to ensure we do not break existing functionality.
 
 
 ## Proposal Purpose
@@ -47,21 +52,21 @@ challenges for the next decade.
 ​​scientists in bio-medical imaging, microscopy, and genomics.  It has
 ​​been actively developed and maintained by a vibrant, primarily
 ​​volunteer community for the past 17 years.  Given the current scale,
-​​scope, and importance of the project, it is critical that we continues
-​​to support professional developers to maintain the project and
-​​community.
+​​scope, and importance of the project, we can not sustainably continue
+​​on only volunteer effort and it is critical that we continues to support
+​​professional developers to maintain the project and community.
 
 With supported developers we have been able reduce our backlog of open
-Issues and Pull Requests, a marked change from the previous year when
-both were increasing.  We propose to dedicate three-quarters of a
-developers time to maintenance and user support.  This work has the
-direct effect of improving the library for our users, bit it also has
-improves the experience of contributors and the community.
+Issues and Pull Requests, a marked change from the previous few years
+when both were steadily increasing.  We propose to dedicate a full
+developer to maintenance, mid-sized enhancements, and user support.
+This has the direct effect of improving the library for our users and
+improve the experience of our contributors and community.
 
-A core strength of Matplotlib is our large and vibrant community of
-contributors, down stream library developers, and users.  We propose
-committing the rest of the developer to maintaining and fostering this
-community.
+A core strength of Matplotlib is the large and vibrant community of
+contributors, down stream library developers, and users around the
+library.  We propose committing approximately a third of the developer to
+maintaining and fostering this community.
 
 Building on the theoretical and design work we have done in the past
 year we will continue to re-implement the core of Matplotlib using the
@@ -81,19 +86,19 @@ year to this effort.
 > training), specify how these activities will be organized, the
 > target audience, and expected outcomes (maximum of 750 words)
 
-A core component of the proposed work is the continued maintenance of
-the library. This is a very broad scope of work that includes every
-thing from fixing critical bugs, reviewing Pull Requests, triaging and
-addressing bug reports, tagging release, and keeping the continuous
-integration services running.  While critical to keeping the project
-healthy and individually small, it is difficult to accomplish them in
-a timely manner with only volunteer effort.  These tasks are
-frequently reactive, you can not plan for a critical bug to be found
-or a dependency to change, time critical, and not always fun.  By
-making sure these tasks are done we will improve the experience for
-both new and existing contributors and improve the rate at which we
-onboard new contributors to the project.  We propose to devote three
-quarters of a developers time to handling these tasks.
+A major component of the proposed work is devoted to the continued
+maintenance of the library.  This is a very broad scope of work that
+includes every thing from fixing critical bugs, reviewing Pull
+Requests, triaging and addressing bug reports, tagging release, and
+keeping the continuous integration services running.  While critical
+to keeping the project healthy and individually small, it is difficult
+to accomplish them in a timely manner with only volunteer effort as
+they are frequently reactive, you can not plan for a critical bug to
+be found or a dependency to change, time critical, and not always fun.
+By making sure these tasks are done we will improve the experience for
+both new and existing contributors and improve the onboard new
+contributors to the project.  We propose to devote three quarters of a
+developers time to handling these tasks.
 
 In addition to the reactive work there are incremental improvements
 that are bigger in scope that can easily be done with volunteer
@@ -108,6 +113,8 @@ a quarter of a developer to these small projects.
 
 Building on what we have learned in the past year working on re-designing the
 low-level architecture we will :
+
+
 
 - Finish architecture development & start to implement in core library
 - start to re-design user API in a way that can make the most of the
@@ -125,6 +132,8 @@ always be a need for domain-specific visualization libraries.  We will
 continue to work with down-stream libraries to make sure that we are
 able to support them to support their users both in terms of
 implementing data sources, artists, and user API.
+
+---
 
 - continue maintenance work
   - review work
@@ -152,7 +161,8 @@ implementing data sources, artists, and user API.
 - ​​Reduce backlog of issues by 50 / quarter
 - ​​Reduce backlog of PRs by 50 / quarter
 
-- initial implementation of data-source backed artists merged to core Matplotlib
+- initial implementation of data-source backed artists packaged and
+  available to early users
 - initial implementation of data-source backed artists in domain specific libraries
 - design documentation about new user-facing API
 - ??
@@ -205,11 +215,12 @@ tool for the job.
 The Matplotlib project is committed to being an open and welcoming
 project.  It is critical that all contributors, independent of
 experience level both in general and with the project, feel safe to
-make mistakes, be wrong, and learn. We embody these values in our 
-interactions on github, our community discussion forum (discourse) 
-and in our social media. In our effort to be welcoming, we have also 
-worked at being more explicit about how the project operates and our 
-norms and values. To this end, we have put major effort into documenting 
-our governance, defining leadership roles, and specificying expectations 
-for new code and community contributors. We hope this explicitness will 
-empower people to make more informed decisions about participating in open source. 
+make mistakes, be wrong, and learn in our community.  We embody these
+values in our interactions on github, our community discussion forum
+(discourse) and in our social media. In our effort to be welcoming, we
+have also worked at being more explicit about how the project operates
+and our norms and values.  To this end, we have put major effort into
+documenting our governance, defining leadership roles, and
+specificying expectations for new code and community contributors.  We
+hope this explicitness will empower people to make more informed
+decisions about participating in open source.
