@@ -101,15 +101,16 @@ contributors to the project.  We propose to devote three quarters of a
 developers time to handling these tasks.
 
 In addition to the reactive work there are incremental improvements
-that are bigger in scope that can easily be done with volunteer
-effort.  These projects can range from fixing long standing rendering
-artifacts, deep-dive documentation into the why of the API design,
-improving performance, to new user facing features.  For example
-these are projects at the scale of adding color-blind filters to all of
-the user interfaces so users can preview their visualizations.  In addition
-to the technical work of adding the filter and UI code we also need to
-do research to make sure we are doing it correctly.  We propose devoting
-a quarter of a developer to these small projects.
+that require larger blocks of time.  These projects range from fixing
+long standing rendering artifacts, to deep-dive documentation into the
+why of the API choices, to performance improvements, to new user
+facing features.  For example, we have a proposal to add filters to
+the UI to preview what plots will look like under different types and
+degrees of color-blindness.  To implement this we need to both do the
+programming and design work to add the feature, we need to research
+how to properly implement the filters and consult with
+color-perception experts.  We propose devoting a quarter of a
+developer to these mid-sized enhancements projects.
 
 Building on what we have learned in the past year working on re-designing the
 low-level architecture we will :
@@ -156,14 +157,34 @@ implementing data sources, artists, and user API.
 > metrics the software project(s) are expected to reach upon
 > completion of the grant (maximum of 500 words)
 
+Quantitatively evaluating maintenance work can be tricky---some Issues
+or PRs take minutes to review while others can take days to weeks of
+effort---but we believe that there is value at looking at the total
+number of open Issues and PRs.  We will reduce this number by closing
+Issues and PRs faster than they are opened until a reasonable
+equilibrium is reached.  We will aim to hit the following metrics:
+
 - Initial response to all issues / new PRs in < 3 days
 - Resolve 90% of new issues / PRs within 1 month
 - ​​Reduce backlog of issues by 50 / quarter
 - ​​Reduce backlog of PRs by 50 / quarter
 
-- initial implementation of data-source backed artists packaged and
-  available to early users
-- initial implementation of data-source backed artists in domain specific libraries
+During the current grant period we are developing a road map
+addressing how we will homogenize the API, implement "smart" composite
+Artists, and overhaul the data model.  In the second year we will
+begin to execute on that road map.  While we are still developing the
+road map, we expect it to include implementations the new
+architecture, in both Matplotlib and domain specific libraries, ready
+for early users.
+
+Additionally, we anticipate that we will be able complete 5 projects
+of the scope of adding a color-blind preview within the scope of this
+grant.  We will identify the projects to be done based on our road map.
+
+The focus of the design work in current grant is on the internal API
+and data structures, in the second year we will begin to develop new
+general-use user facing APIs.
+
 - design documentation about new user-facing API
 - ??
 
