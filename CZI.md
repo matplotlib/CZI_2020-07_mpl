@@ -3,12 +3,10 @@
 > Provide a short summary of progress towards the deliverables in your
 > currently funded proposal (maximum of 250 words)
 
-> 172 words
-
 We identified and hired Elliott Sales de Andrade as an Software
 Research Engineer who started in mid-March.  Since then we have hit
-our target of a net reduction of open PRs by 50/quarter.  We are
-making progress on reducing the number of open issues but our initial
+our target of a net reduction of open PRs by 50/quarter and are making
+progress on reducing the number of open issues.  However, our initial
 estimates of the effort per issue closed was too optimistic.  Several
 of the issues closed were mid-sized and high-impact projects
 (documentation, js modernization, and semantic Axes layout).  In
@@ -58,11 +56,6 @@ Scientific Python Ecosystem, we will address the maintenance backlog
 and begin Matplotlib's evolution to meet the community’s visualization
 challenges for the next decade.
 
-​​To enable Matplotlib to continue as the core plotting library of the
-Scientific Python Ecosystem, we will address the maintenance backlog
-and plan Matplotlib's evolution to meet the community’s visualization
-challenges for the next decade.
-
 
 ## Abstract/Proposal Summary
 > A short summary of the application ​(maximum of 250 words)
@@ -73,14 +66,14 @@ challenges for the next decade.
 
 > 252 words
 
-​​Matplotlib is the foundational data visualization library for the
-​​Scientific Python Ecosystem, used by over a million users, including
-​​scientists in bio-medical imaging, microscopy, and genomics.  It has
-​​been actively developed and maintained by a vibrant, primarily
-​​volunteer community for the past 17 years.  Given the current scale,
-​​scope, and importance of the project, we can not sustainably continue
-​​on only volunteer effort and it is critical that we continues to support
-​​professional developers to maintain the project and community.
+Matplotlib is the foundational data visualization library for the
+Scientific Python Ecosystem, used by over a million users, including
+scientists in bio-medical imaging, microscopy, and genomics.  It has
+been actively developed and maintained by a vibrant, primarily
+volunteer community for the past 17 years.  Given the current scale,
+scope, and importance of the project, we can not sustainably continue
+on only volunteer effort.  It is critical that we continues to support
+professional developers to maintain the project and community.
 
 With supported developers we have been able reduce our backlog of open
 Issues and Pull Requests, a marked change from the previous few years
@@ -132,12 +125,13 @@ long standing rendering artifacts, to deep-dive documentation into the
 why of the API choices, to performance improvements, to new user
 facing features.  For example, we have a proposal to add filters to
 the UI to preview what plots will look like under different types and
-degrees of color-blindness.  To implement this we need to both do the
-programming and design work to add the feature, we need to research
-how to properly implement the filters and consult with
-color-perception experts.  We will aim to complete 5 of these projects
-and will work with downstream bio-projects to identify what will have
-the greatest impact.
+degrees of color-blindness.  To implement this we would need to
+research how to properly implement the filters and consult with
+color-perception experts in addition to the programming and design
+work to add the feature.  Having a developer able to devote large
+blocks of time to Matplotlib will enable work of this scale.  We will
+aim to complete 5 of these projects and will work with downstream
+bio-projects to identify what will have the greatest impact.
 
 The most common visualizations in a domain need to be fluid for the
 end-practitioners, with the "obvious" customization options exposed.
