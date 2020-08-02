@@ -105,45 +105,69 @@ the graduate student who is leading the this effort as her thesis work.
 > training), specify how these activities will be organized, the
 > target audience, and expected outcomes (maximum of 750 words)
 
-A major component of the proposed work is devoted to the continued
-maintenance of the library.  This is a very broad scope of work that
-includes every thing from fixing critical bugs, reviewing Pull
-Requests, triaging and addressing bug reports, tagging release, and
-keeping the continuous integration services running.  While critical
-to keeping the project healthy and individually small, it is difficult
-to accomplish them in a timely manner with only volunteer effort as
-they are frequently reactive, you can not plan for a critical bug to
-be found or a dependency to change, time critical, and not always fun.
-By making sure these tasks are done we will improve the experience for
-both new and existing contributors and improve the onboarding of new
-contributors to the project.  We propose to devote three quarters of a
-developers time to handling these tasks.
 
-In addition to the reactive work there are incremental improvements
-that require larger blocks of time.  These projects range from fixing
-long standing rendering artifacts, to deep-dive documentation into the
-why of the API choices, to performance improvements, to new user
-facing features.  For example, we have a proposal to add filters to
-the UI to preview what plots will look like under different types and
-degrees of color-blindness.  To implement this we would need to
-research how to properly implement the filters and consult with
-color-perception experts in addition to the programming and design
-work to add the feature.  Having a developer able to devote large
-blocks of time to Matplotlib will enable work of this scale.  We will
-aim to complete 5 of these projects and will work with downstream
-bio-projects to identify what will have the greatest impact.
+The continued maintenance of the library is a major component of the
+proposed work.  The term "maintence" covers a wide range of tasks
+from fixing bugs, reviewing Pull Requests, triaging bug reports,
+tagging release, to keeping the continuous integration services
+running.
 
-The most common visualizations in a domain need to be fluid for the
-end-practitioners, with the "obvious" customization options exposed.
+These task are essential for the project's health and each
+individually are small, but are best handled by a paid developer.
+These tasks are frequently reactive, time critical, and not always
+"fun" which is awkward to rely on solely volunteer effort to
+accomplish in a timely manner.  In addition to the inherent value of
+completing these tasks, having them promptly and reliably addressed
+improves the contribution experience for everyone working on the
+project.  We propose to devote three quarters of a developers time to
+handling these tasks.
+
+In addition to the reactive work there are substantial but incremental
+improvements that will benefit from long blocks of dedicated work.
+Examples of this work include fixing long standing rendering and
+performance issues, deep-dive documentation, homogenizing and
+smoothing the API, and new user-facing functionality. For example, we
+have a long-standing prototype adding a color-blind simulation filter
+to the UI.  To turn this prototype into a user-ready functionality we
+need to do additional research to make sure we are implementing the
+filters accurately in addition to the engineering effort.  We propose
+to devote about a quarter of a developer to this effort which should
+enable us to complete 5 of these projects.  We will work with
+downstream bio-projects to identify what will have the greatest
+impact.
+
+As a library Matplotlib needs to be able to support the use cases for
+the full range of science domains and complex novel visualization [1]
+that provide new insight.  At the same time the most common
+visualizations in a domain need to be fluid for the end-practitioners,
+with the "obvious" customization options exposed.  To achieve both of
+these goals we need to continue to foster a two layer eco-system with
+a shared core and many domain specific libraries.  Building on the
+work done this year to design consistent internal data structures we
+will begin to develop simpler and more expressive user-level APIs, both
+in collaboration with domain specific libraries and in core Matplotlib.
+
+
+In the current grant cycle we have been developing
+a new architecture for
+
+
+
 Much of the domain-specific specialization is carried in the
 structure, semantics and assumptions of the data, and in the standard
-visualizations of the domain.  These specializations can vary widely,
-in contradictory ways, between domains.  Because no high-level API can
+visualizations of the domain.
+
+These specializations can vary widely,
+in contradictory ways, between domains.
+
+Because no high-level API can
 simultaneously satisfy all of the visualization needs, there will
 always be a need for domain-specific visualization libraries.
-Building on the work done this year to design consistent internal data
-structures we will begin to develop simpler and more expressive
-top-level APIs.  We will continue to work with down-stream bio
+
+
+
+
+We will continue to work with down-stream bio
 libraries to support them in implementing data sources, artists, and
 user API.
 
@@ -153,7 +177,7 @@ co-ordinate and nurture their efforts, with the goal of growing and
 sustaining a diverse community of volunteer and paid expert
 contributors.
 
-
+1 https://rgutzen.github.io/2020-06-25-visualizing_waves/
 ---
 
 - continue maintenance work
