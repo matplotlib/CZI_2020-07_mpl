@@ -1,10 +1,10 @@
-# Progress Report
+## Progress Report
 
 > Provide a short summary of progress towards the deliverables in your
 > currently funded proposal (maximum of 250 words)
 
-The current grant is supporting one developer at 40%, one graduate
-student with partial summer support for her advisor, and a full time
+The current grant is supporting one developer at 40% (Thomas Caswell), one graduate
+student (Hannah Aizenman) with partial summer support for her advisor (Michael Grossberg), and a full time
 Research Software Engineer.  For the latter we ran a search and hired
 Elliott Sales de Andrade who started in mid-March.
 
@@ -13,13 +13,12 @@ grant.  We hit our target of a net reduction of open PRs by 50/quarter
 and are making progress on reducing the number of open issues.  Our
 initial estimates of the effort per issue closed were too optimistic;
 however, we merged several mid-sized and high-impact projects
-(documentation, js modernization, and semantic axes layout).
+(documentation, JavaScript modernization, and a complex axes layout helper).
 Additionally we drafted new governance and contributor onboarding
 guidelines and had 2 feature and 4 bug-fix releases.
 
 
-We presented our new architecture ideas to the scientific library development community at the SciPy 2020 maintainers track.  We have designed the prototype API to have a clean separation between the `DataSource`, `Artist`, and render layers. We have started implementing sample DataSources and Artists to formalize and validate the interface between them. Because the prototype is still developing rapidly, we are postponing working with a downstream
-partner until the API has stabilized.
+We presented our new architecture ideas to the scientific library development community at the SciPy 2020 maintainers track.  We designed the prototype API to have a clean separation between the `DataSource`, `Artist`, and rendering layers. We started implementing sample DataSources and Artists to formalize and validate the interface between them. Because the prototype is still developing rapidly, we are postponing working with a downstream partner until the API has stabilized.
 
 ## Proposal Purpose
 
@@ -44,27 +43,19 @@ challenges for the next decade.
 
 Matplotlib is the foundational data visualization library for the
 Scientific Python Ecosystem, with over a million users, including
-scientists in bio-medical imaging, microscopy, and genomics. It has
+researchers in bio-medical imaging, microscopy, and genomics. It has
 been actively developed and maintained by a vibrant, primarily
-volunteer community for the past 17 years. Given the scale,
-scope, and importance of the project, we cannot sustainably continue
-on only volunteer effort.  It is critical that we continue to support
-professional developers to maintain the project and community.
-
-With supported developers, we reduced our backlog of open
+volunteer, community for the past 17 years.
+In the past 6 months, with supported developers, we reduced our backlog of open
 Issues and Pull Requests. This is a marked change from the previous few years,
-when both were steadily increasing. We propose to support an FTE of effort
+when both were steadily increasing with only volunteer effort. We propose to support an FTE of effort
 to continue maintenance, mid-sized enhancements, and user support.
 This has the direct effect of improving the library for our users and
-improving the experience of our contributors and community.
-
-A core strength of Matplotlib is the vibrant community of
-contributors, downstream library developers, and users. We propose
-committing approximately a quarter of FTE to
-maintaining and fostering this community.
+improving the experience of our contributors and community. We also propose
+committing approximately a quarter of FTE to community maintenance, inculding goverance.
 
 Building on the theoretical and design work we have done in the past
-year, we will begin to evolve Matplotlib to incrementally make use of the
+year, we will begin to evolve Matplotlib to take advantage of the
 new architecture.  We will continue to collaborate with domain specific libraries to
 build tuned plotting tools.  We propose continuing support for
 the graduate student who is leading this effort as her thesis work, along with partial summer support of her advisor, and the remainder of the developer effort.
@@ -83,7 +74,7 @@ the graduate student who is leading this effort as her thesis work, along with p
 
 The continued maintenance of the library is a major component of the
 proposed work. Maintenance covers a wide range of tasks including
-triaging bug reports, fixing some of those bugs, reviewing Pull Requests,
+triaging bug reports, fixing bugs, reviewing Pull Requests,
 tagging releases, and keeping the continuous integration services
 running. These tasks are essential for the project's health; though each
 individually is small, they are frequently time critical and
@@ -93,9 +84,9 @@ In addition, having these tasks promptly and reliably addressed
 improves the contribution experience for everyone working on the project.
 We propose to devote three quarters of a developer's time to handling these tasks.
 
-In addition to the maintenance, there are substantial but incremental
+In addition to routine maintenance tasks, there are substantial but incremental
 improvements that require long blocks of dedicated work.
-Examples of this work include fixing long standing rendering and
+Examples of this work include fixing long-standing rendering and
 performance issues, deep-dive documentation, homogenizing and
 smoothing the API, and new user-facing functionality.
 For example in the current grant cycle we implemented a new flexible, easier to use, axes layout API that
@@ -103,33 +94,34 @@ allows users to arrange named Axes in a complex Figure.
 A candidate of similar scope is adding a color-blind simulation filter to the UI to facilitate accessible visualization.
 Funding would allow us to tackle about 5 such medium-sized,
 self-contained projects with about a quarter of an FTE.  Without
-funding this sort of project can drag out for months or stall
-altogether. We will work with downstream bio-projects to identify what
-will have the greatest impact.
+funding, this type of project can drag out for months or stall
+altogether. We will identify high-impact improvements in collaboration
+with down-stream bio-libraries.
 
-The core strength of Matplotlib is our community.  We propose a quarter developer effort to community management, including governance, outreach, communications, and
-moderation. They will also facilitate discussions around proposed
-enhancements, features, and API changes. The requested support is intended to complement, not replace, crucial volunteer work.
+We propose dedicating a quarter of FTE (distributed across funded personnel)
+to community maintenance, including governance, outreach, communications,
+and moderation. They will also facilitate discussions around proposed enhancements,
+features, and API changes. The requested support is intended to complement,
+not replace, crucial volunteer work.
 
-Matplotlib needs to support use cases for the vast range
-of science domains and enable novel complex visualizations [1].  At
-the same time the most common visualizations in a domain need to be
-fluid for the end-practitioners, with the most commonly used and
-expected customization options exposed.  To achieve both of these
+Matplotlib needs to support use cases across a vast range
+of science domains, enabling complex visualizations [1].  At
+the same time, common visualizations in a domain need to be
+fluid for the end-practitioners, tuned to the domain's standard data structures,
+and with domain-specific customization options exposed.  To achieve both of these
 goals, we need to continue to foster a two-layer ecosystem with a
 shared core (Matplotlib) and many domain-specific libraries (seaborn, nipy, ...).
 
-In the
-current grant cycle we have been developing a new architecture that is
+In the current grant cycle we have been developing a new architecture that is
 heavily invested in cleanly separating the three steps in a
-visualization pipeline: data representation, the encoding the data
-as visual elements, and the rendering of those elements to
-screen. We believe that a better delineation of these steps will more
-easily allow domain practitioners to extend our functionality.
-Building on the work
+visualization pipeline: data representation, encoding the data
+as visual elements, and rendering those elements to
+screen. We believe that a better delineation of these steps will allow
+domain practitioners to more easily implement extensions.
+Following on the work
 done this year to design consistent data and artist abstractions, we will
-begin to develop simpler and more expressive user-level APIs in
-collaboration with domain specific libraries and in core Matplotlib.  This effort is led by
+develop simpler and more expressive user-level APIs in core Matplotlib and in
+collaboration with domain-specific libraries.  This effort is led by
 the graduate student as part of her thesis work.
 
 [1] https://rgutzen.github.io/2020-06-25-visualizing_waves/
@@ -156,14 +148,14 @@ equilibrium is reached.  We will aim to hit the following metrics:
 - 5 mid-sized new features
 
 The focus of the design work in the current grant is on the core API
-and data structures, in the second year we will develop and deploy concrete implementations.
+and data structures. In the second year we will develop and deploy a
+provisional implementation in Matplotlib and document how developers
+can build tools that use this interface. Specific goals are to provide:
 
-
-- developer facing documentation for core architecture
-- academic paper about core architecture
-- developer facing documenation about how to use the core architecture
-- academic tools paper about how to use the core architecture
-- concrete implemenation using new data model in Matplotlib
+- provisional implementation using new architecture in Matplotlib
+- developer-aimed documentation (API + narrative)
+- proof of concept 3rd party user-facing library with a biology partner
+- academic paper about building visualization tools on top of the core architecture
 
 ## Landscape Analysis
 
@@ -198,6 +190,13 @@ use the right tool (or mix of tools) for the job.
 
 [1] https://pypi.org/search/?q=&o=&c=Framework+%3A%3A+Matplotlib
 
+## existing support
+
+- CZI cycle 1 grant (250k, Jan 2020-Jan 2021, EOSS-0000000100)
+- NF small development grant (5k$ to support documentation, completed)
+- NF small development grant (3k$ to support a hosted mac mini, 3yr)
+- GSOC 2020 (1 student, summer 2020)
+
 
 ## Diversity, Equity, and Inclusion (DEI) Statement
 
@@ -223,4 +222,4 @@ experience level both in general and with the project, feel safe to
 make mistakes and learn in our community. We strive to embody these values
 in our interactions on github, our mailing list and community discussion forum
 (discourse), and in our social media. We hope that these practices will
-empower and encourage people of diverse identities to participate in Matplotlib.
+empower and encourage people who have diverse identities to participate in Matplotlib.
